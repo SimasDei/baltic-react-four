@@ -7,7 +7,7 @@ class App extends Component {
 
 
   fetchMealData() {
-    ReactDOM.render(<Preloader/>, document.getElementById('content'))
+    ReactDOM.render(<Preloader/>, document.getElementById('content'));
     fetch('https://www.themealdb.com/api/json/v1/1/random.php')
       .then((resp) => resp.json())
       .then(function (data) {
@@ -18,10 +18,10 @@ class App extends Component {
   render() {
     //let preloader = this.state.isPreloader ? <Preloader/> : ''
     return (
-      <div className="App">
+      <div className="App" id={'App'}>
         <h1>What I'm going to eat today?!</h1>
         <div id="content">
-          <button onClick={this.fetchMealData.bind(this)} >Show me something</button>
+          <button onClick={this.fetchMealData.bind(this)}>Feed me please!</button>
         </div>
       </div>
     );
@@ -30,4 +30,5 @@ class App extends Component {
 function Preloader (props) {
   return (<div>Please wait.</div>)
 }
+
 export default App;
