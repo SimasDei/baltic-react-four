@@ -47,13 +47,31 @@
   cursor:pointer;
 }
 
+#content .buttonCategory {
+  width: 150px;
+}
+
 .mealContainer {
   width: 80%;
   height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+padding: 20px 40px;
+border-radius: 10px;
+box-shadow: 0 10px 50px #555;
+background-color: #fff;
+}
+
+.categoryContainer {
+  width: 80%;
+  height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-direction: row;
   padding: 20px 40px;
   border-radius: 10px;
   box-shadow: 0 10px 50px #555;
@@ -96,3 +114,4 @@
   min-width: 49%;
   padding: 5px;
 }
+

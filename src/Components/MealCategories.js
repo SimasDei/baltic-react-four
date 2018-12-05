@@ -7,11 +7,15 @@ import MealCategory from './MealCategory';
 
 export default function MealCategories(props) {
   return (
-    <div>{props.data.categories.map(function (item) {
+    <div className={'categoryContainer'}>{props.data.categories.map(function (item) {
       return (
         <div>
-          {item.strCategory}
-          <button onClick={fetchMealCategory.bind(this, item.strCategory, props.data)}>Click Me</button>
+          <div className={'mealTitle'}><h2>{item.strCategory}</h2></div>
+          <img src={item.strCategoryThumb} alt=""/>
+
+          <div>
+            <button className={'buttonCategory'} onClick={fetchMealCategory.bind(this, item.strCategory, props.data)}>Click Me</button>
+          </div>
         </div>
       )
     })}</div>

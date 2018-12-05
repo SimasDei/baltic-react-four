@@ -9,7 +9,6 @@ export default function MealCategory(props) {
         return (
           <div className={'mealContainer'}>
             <button onClick={fetchMealView.bind(this, item.idMeal, props.data)}>{item.strMeal}</button>
-
           </div>
         )
       })}
