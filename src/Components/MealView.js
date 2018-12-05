@@ -21,8 +21,8 @@ export default function MealView(props) {
       <div className={'mealIngredients'}>
         <h2>I am the Ingredient list !</h2>
         <ul className={'ingredientList'}>
-          {getIngredients(meal).map(function (d, key) {
-            return (<li key={key}><span className={'ingredientSpan'}>{'Ingredient: ' + d.ingredient}</span> <span className={'measureSpan'}>Measurement: {d.measurement}</span></li>)
+          {getIngredients(meal).map(function (value, key) {
+            return (<li key={key}><span className={'ingredientSpan'}>{'Ingredient: ' + value.ingredient}</span> <span className={'measureSpan'}>Measurement: {value.measurement}</span></li>)
           })}
         </ul>
       </div>
