@@ -19,8 +19,8 @@ class App extends Component {
     //let preloader = this.state.isPreloader ? <Preloader/> : ''
     return (
       <div className="App" id={'App'}>
-        <h1>What I'm going to eat today?!</h1>
         <div id="content">
+          <h1>What I'm going to eat today?!</h1>
           <button onClick={this.fetchMealData.bind(this)}>Feed me please!</button>
         </div>
       </div>

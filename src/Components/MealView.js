@@ -37,7 +37,7 @@ export default function MealView(props) {
 }
 
 let goBack = () => {
-  ReactDOM.render(<App/>, document.getElementById('App'));
+  ReactDOM.render(<App/>, document.getElementById('content'));
 };
 
 function getIngredients(data) {
