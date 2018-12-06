@@ -3,6 +3,7 @@ import App from '../App';
 import Youtube from 'react-youtube';
 import ReactDOM from "react-dom";
 import Aux from "./Auxilary";
+import MealCategory from "./MealCategory";
 
 export default function MealView(props) {
   let meal = props.data.meals[0];
@@ -17,10 +18,10 @@ export default function MealView(props) {
           style={{fontWeight: 'bold'}} onClick={goBack}>Home</span>
         <strong> > </strong>
         <span
-          style={{fontWeight: 'bold', fontSize: '24px'}}>Beef</span>
+          style={{fontWeight: 'bold', fontSize: '24px'}} onClick={fetchMealCategory.bind(this,props.data, props.category)}>{props.category}</span>
         <strong> > </strong>
         <span
-          style={{fontWeight: 'bold', fontSize: '24px'}}>Beef and Mustard Pie</span>
+          style={{fontWeight: 'bold', fontSize: '24px'}}>{props.meal}</span>
       </div>
 
       <div className={'mealContainer'}>
@@ -58,6 +59,14 @@ export default function MealView(props) {
 let goBack = () => {
   ReactDOM.render(<App/>, document.getElementById('content'));
 };
+
+function fetchMealCategory(data,category) {
+  fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`)
+    .then((resp) => resp.json())
+    .then((function (data) {
+      ReactDOM.render(<MealCategory data={data} category={category} />, document.getElementById('content'))
+    }))
+}
 
 function getIngredients(data) {
   let result = null;
