@@ -1,117 +1,142 @@
 .App {
-  height: 100%;
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(to bottom right, rgba(73,9,121,1) 0%, rgba(0,212,255,1) 100%);
+    height: 100%;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom right, rgba(73, 9, 121, 1) 0%, rgba(0, 212, 255, 1) 100%);
+    font-family: Ubuntu, Arial, Roboto, sans-serif;
 }
 
 .App h1 {
-  text-align: center;
-  width: 100%;
-  color: #fff;
-  font-weight: lighter;
-  font-family: Ubuntu, Arial, Roboto, sans-serif;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    font-weight: lighter;
+    font-family: Ubuntu, Arial, Roboto, sans-serif;
 }
 
 #content {
-  width: 80%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 20px 40px;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 40px;
 }
 
 #content button {
-  background-color: cornflowerblue;
-  color: #fff;
-  border: 2px solid #fff;
-  width: 34%;
-  margin-top: 1em;
-  padding: 8px 0px;
-  font-size: 1em;
-  font-weight: lighter;
-  letter-spacing: 1px;
-  margin-bottom: 0.25em;
+    background-color: cornflowerblue;
+    color: #fff;
+    border: 2px solid #fff;
+    width: 34%;
+    margin-top: 1em;
+    padding: 8px 0px;
+    font-size: 1em;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    margin-bottom: 0.25em;
 }
 
 #content button:hover {
-  color: cornflowerblue;
-  background-color: #fff;
-  border: 2px solid cornflowerblue;
-  cursor:pointer;
+    color: cornflowerblue;
+    background-color: #fff;
+    border: 2px solid cornflowerblue;
+    cursor: pointer;
+}
+
+#content .buttonContainer {
+    display: flex;
+    justify-content: center;
 }
 
 #content .buttonCategory {
-  width: 150px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
 }
 
 .mealContainer {
-  width: 80%;
-  height: 100%;
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-padding: 20px 40px;
-border-radius: 10px;
-box-shadow: 0 10px 50px #555;
-background-color: #fff;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 50px #555;
+    background-color: #fff;
+    margin-bottom: 16px;
 }
 
 .categoryContainer {
-  width: 80%;
-  height: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  flex-direction: row;
-  padding: 20px 40px;
-  border-radius: 10px;
-  box-shadow: 0 10px 50px #555;
-  background-color: #fff;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 50px #555;
+    background-color: #fff;
 }
 
 .mealHead {
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .mealHead img {
-  border-radius: 5%;
+    border-radius: 5%;
+}
+
+.mealContainer--image {
+    display: flex;
+    width: 90%;
+    border-radius: 5%;
+    justify-content: center;
+}
+
+.mealTitle {
+    display: flex;
+    justify-content: center;
 }
 
 .mealIngredients {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .mealIngredients ul {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  padding: 5px;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 5px;
 }
 
 .mealIngredients li {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-around;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
 }
 
 .mealIngredients span {
-  min-width: 49%;
-  padding: 5px;
+    min-width: 49%;
+    padding: 5px;
+}
+
+.pathTaken span:hover{
+    cursor: pointer;
 }
 
