@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from "react-dom";
 import MealCategory from './MealCategory';
-import Random from './Random';
 import Aux from './Auxilary';
 import App from "../App";
-import Mealview from './MealView';
+import Routing from './Routing';
+// import Random from './Random';
 // import App from '../App';
 // import Youtube from 'react-youtube';
 // import ReactDOM from "react-dom";
@@ -38,7 +38,10 @@ export default function MealCategories(props) {
         )
       })}</div>
 
-      <Random/>
+      <div className={'categoryContainer'} style={{marginTop: '36px'}}>
+        <Routing/>
+      </div >
+
     </Aux>
   )
 }
