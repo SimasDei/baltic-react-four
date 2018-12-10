@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from "react-dom";
 import MealCategory from './MealCategory';
+import Random from './Random';
 import Aux from './Auxilary';
 import App from "../App";
 import Mealview from './MealView';
@@ -36,6 +37,8 @@ export default function MealCategories(props) {
           </div>
         )
       })}</div>
+
+      <Random/>
     </Aux>
   )
 }
