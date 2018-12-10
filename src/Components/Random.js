@@ -5,7 +5,7 @@ const random = (props) => {
 
   return (
     <div>Random Uneatable Thing
-      <button onClick={getRandomMeal}>Works?</button>
+      <button onClick={getRandomMeal.bind(this, 1)}>Works?</button>
     </div>
   )
 };
@@ -20,9 +20,9 @@ const random = (props) => {
 //     }).then(function (myJson) {
 //     data = myJson;
 //     return data;
- // };
+// };
 
-const getRandomMeal = () => {
+const getRandomMeal = (iteration) => {
   fetch('https://www.themealdb.com/api/json/v1/1/random.php')
     .then(function (response,) {
       return (
@@ -53,13 +53,14 @@ const getRandomMeal = () => {
       return {ingredient: item[1], measurement: data[pointerToMeasurement]};
     });
 
-    console.log(result);
-  }).then(function (result) {
-    let ingredientArray = [];
-    ingredientArray.concat(result);
-    for (let i = 0; i <= 3; i++) {
-      getRandomMeal();
+    let ingredientArray = [result];
+
+    if (iteration <= 3) {
+      for ( iteration; iteration < 3; iteration++) {
+        ingredientArray.concat(getRandomMeal());
+      }
     }
+    console.log(ingredientArray);
     return ingredientArray;
   })
 };
